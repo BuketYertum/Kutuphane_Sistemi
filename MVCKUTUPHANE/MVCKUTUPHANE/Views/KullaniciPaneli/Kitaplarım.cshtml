@@ -1,0 +1,32 @@
+﻿@using MVCKUTUPHANE.Models.Entity
+@model List<TBL_HAREKETLER>
+
+
+@{
+    ViewBag.Title = "Kitaplarım";
+    Layout = "~/Views/Shared/LayoutPanel.cshtml";
+}
+<br/>
+<h2>Kitap Geçmişim</h2>
+<br/>
+
+<table class="table table-bordered">
+    <tr>
+
+        <th>KİTAP ADI</th>
+        <th>ALIŞ TARİHİ</th>
+        <th>İADE TARİHİ</th>
+     
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.TBL_KITAP.AD</td>
+            <td>@Convert.ToDateTime(x.ALISTARIHI).ToString("dd/MM/yyyy")</td>
+            <td>@Convert.ToDateTime(x.IADETARIHI).ToString("dd/MM/yyyy")</td>
+        </tr>
+    }
+
+
+</table>

@@ -1,0 +1,65 @@
+﻿
+
+@model MVCKUTUPHANE.Models.Entity.TBL_HAREKETLER
+
+@{
+    ViewBag.Title = "OduncIade";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("OduncGuncelle", "Hareket", FormMethod.Post))
+{
+    <form class="form-group" method="post">
+
+        <div style="margin-top:15px">
+            <label>Kitap Id</label>
+            @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        </div>
+
+
+        <div style="margin-top:15px">
+            <label>Alınan Kitap</label>
+            @Html.TextBoxFor(k => k.TBL_KITAP.AD, new { @class = "form-control" })
+        </div>
+
+        <div style="margin-top:15px">
+            <label>Alan Üye</label>
+            @Html.TextBoxFor(k => k.TBL_UYELER.AD, new { @class = "form-control" })
+        </div>
+
+        <div style="margin-top:15px">
+            <label>Personel Adı</label>
+            @Html.TextBoxFor(k => k.TBL_PERSONELLER.PERSONEL, new { @class = "form-control" })
+        </div>
+
+        <div style="margin-top:15px">
+            <label>Alış Tarihi</label>
+            @Html.TextBoxFor(k => k.ALISTARIHI, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+        </div>
+
+        <div style="margin-top:15px">
+            <label>İade Tarihi</label>
+            @Html.TextBoxFor(k => k.IADETARIHI, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+        </div>
+
+        <div style="margin-top:15px">
+            <label>Kitabı Getirdiği Tarih</label>
+            <input type="text" class="form-control" name="UYEGETIRTARIH" value="@DateTime.Now.ToShortDateString()" />
+        </div>
+
+        <br/>
+        <label>Geç Gelen Gün Sayısı</label>
+        <input type="text" class="form-control" id="GecGun" value="@ViewBag.dgr" />
+      
+        <br />
+        <button class="btn btn-info">KİTABI AL</button>
+
+
+    </form>
+
+
+
+}
+

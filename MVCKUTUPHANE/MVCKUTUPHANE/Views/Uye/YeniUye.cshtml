@@ -1,0 +1,39 @@
+﻿
+@model MVCKUTUPHANE.Models.Entity.TBL_UYELER
+
+@{
+    ViewBag.Title = "YeniUye";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<form method="post" class="form-group">
+    
+    <label style="margin-top:15px">AD</label>
+    @Html.TextBoxFor(u => u.AD, new { @class = "form-control" })
+  
+    <label style="margin-top:15px">SOYAD</label>
+    @Html.TextBoxFor(u => u.SOYAD, new { @class = "form-control" })
+
+    <label style="margin-top:15px">MAIL</label>
+    @Html.TextBoxFor(u => u.MAIL, new { @class = "form-control" })
+
+    <label style="margin-top:15px">KULLANICIADI</label>
+    @Html.TextBoxFor(u => u.KULLANICIADI, new { @class = "form-control" })
+
+    <label style="margin-top:15px">SIFRE</label>
+    @Html.TextBoxFor(u => u.SIFRE, new { @class = "form-control" })
+
+    <label style="margin-top:15px">FOTO</label>
+    @Html.TextBoxFor(u => u.FOTO, new { @class = "form-control" })
+
+    <label style="margin-top:15px">TELEFON</label>
+    @Html.TextBoxFor(u => u.TELEFON, new { @class = "form-control" })
+
+    <label style="margin-top:15px">OKUL</label>
+    @Html.TextBoxFor(u => u.OKUL, new { @class = "form-control" })
+
+    <button style="margin-top:15px" class="btn btn-success">Üye Ekle</button>
+</form>
+
+

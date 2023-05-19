@@ -1,0 +1,34 @@
+﻿
+@model MVCKUTUPHANE.Models.Entity.TBL_YAZAR
+
+@{
+    ViewBag.Title = "Getir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Guncelle", "Yazar", FormMethod.Post))
+{
+    <br/>
+    <label class="form-control"> Yazar ID </label>
+    @Html.TextBoxFor(y => y.ID, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> Yazar AD </label>
+    @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> Yazar Soyad </label>
+    @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> Yazar Detay Bilgisi </label>
+    @Html.TextBoxFor(y => y.DETAY, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+}
+
+
+

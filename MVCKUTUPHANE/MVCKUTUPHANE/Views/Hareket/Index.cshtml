@@ -1,0 +1,43 @@
+﻿
+@using MVCKUTUPHANE.Models.Entity
+
+@model List<TBL_HAREKETLER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>ALINAN KİTAP</th>
+        <th>ÜYE</th>
+        <th>PERSONEL</th>
+        <th>ALIŞ TARİHİ</th>
+        <th>İADE TARİHİ</th>
+        <th>İŞLEMLER</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.TBL_KITAP.AD</td>
+            <td>@x.TBL_UYELER.AD &nbsp @x.TBL_UYELER.SOYAD</td>
+            <td>@x.TBL_PERSONELLER.PERSONEL</td>
+            <td>@Convert.ToDateTime(x.ALISTARIHI).ToString("dd/MM/yyyy")</td>
+            <td>@Convert.ToDateTime(x.IADETARIHI).ToString("dd/MM/yyyy")</td>
+            <td>
+                <a href="/Hareket/OduncIade/@x.ID" class="btn btn-warning" style="background:#5f5858; color:white">İADE ET</a>
+            </td>
+        </tr>
+    }
+
+
+</table>
+
+
+

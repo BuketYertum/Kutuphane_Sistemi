@@ -1,0 +1,23 @@
+﻿
+@model MVCKUTUPHANE.Models.Entity.TBL_KATEGORILER
+
+@{
+    ViewBag.Title = "YeniKategori";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<form class="form-group" method="post">
+    <div style="margin-top:15px">
+        <label>KATEGORİ AD</label>
+        @Html.TextBoxFor(k=>k.AD, new {@class="form-control"})
+        @Html.ValidationMessageFor(k => k.AD, "", new { @style = "color:red" })
+        <br/>
+
+    </div>
+
+    <br />
+    <button class="btn btn-info">Kategori Ekle</button>
+
+
+</form>

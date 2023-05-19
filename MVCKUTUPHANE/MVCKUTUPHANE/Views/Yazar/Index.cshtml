@@ -1,0 +1,40 @@
+﻿
+@using MVCKUTUPHANE.Models.Entity
+
+@model List<TBL_YAZAR>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<table class="table table-striped">
+    <tr style="background-color:#0966a9">
+        <th>ID</th>
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>DETAY</th>
+        <th>İŞLEMLER</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.AD</td>
+            <td>@x.SOYAD</td>
+            <td>@x.DETAY</td>
+            <td>
+                @Html.ActionLink("Sil", "Sil", new { id = x.ID }, new { @class = "btn btn-danger",
+                                                                       onclick = "return confirm ('Silmek istediginizden emin misiniz?')"})
+               
+                <a href="/Yazar/Getir/@x.ID" class="btn btn-warning">GÜNCELLE</a>
+            </td>
+        </tr>
+    }
+
+
+</table>
+<a href="/Yazar/YeniYazar" class="btn btn-info">Yeni Yazar Ekle</a>
+

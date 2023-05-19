@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bbbb5098ce234fc599836b63d82f7663" Name="Diagram1">
+        <EntityTypeShape EntityType="DboKutuphaneModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_CEZALAR" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_HAREKETLER" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_KASA" Width="1.5" PointX="7.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_KATEGORILER" Width="1.5" PointX="1.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_KITAP" Width="1.5" PointX="3.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_PERSONELLER" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_UYELER" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_YAZAR" Width="1.5" PointX="1.5" PointY="10" IsExpanded="true" />
+        <AssociationConnector Association="DboKutuphaneModel.FK_TBL_CEZALAR_TBL_HAREKETLER" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKutuphaneModel.FK_TBL_CEZALAR_TBL_UYELER" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKutuphaneModel.FK_TBL_HAREKETLER_TBL_KITAP" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKutuphaneModel.FK_TBL_HAREKETLER_TBL_PERSONELLER" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKutuphaneModel.FK_TBL_HAREKETLER_TBL_UYELER" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKutuphaneModel.FK_TBL_KITAP_TBL_KATEGORILER" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKutuphaneModel.FK_TBL_KITAP_TBL_YAZAR" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_HAKKIMIZDA" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_ILETISIM" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DboKutuphaneModel.TBL_MESAJLAR" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

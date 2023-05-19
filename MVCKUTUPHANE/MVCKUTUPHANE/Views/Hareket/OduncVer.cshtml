@@ -1,0 +1,45 @@
+﻿
+@model MVCKUTUPHANE.Models.Entity.TBL_HAREKETLER
+
+@{
+    ViewBag.Title = "OduncVer";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<form class="form-group" method="post">
+    <div></div>
+
+    <div style="margin-top:15px">
+        <label>Kitap ID</label>
+        @Html.TextBoxFor(k => k.ALINANKITAP, new { @class = "form-control" })
+    </div>
+
+
+    <div style="margin-top:15px">
+        <label>Üye ID</label>
+        @Html.TextBoxFor(k => k.UYE, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Personel ID</label>
+        @Html.TextBoxFor(k => k.PERSONEL, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Alış Tarihi</label>
+        <input type="text" class="form-control" name="ALISTARIHI" value="@DateTime.Now.ToShortDateString()" />
+    </div>
+
+    <div style="margin-top:15px">
+        <label>İade Tarihi</label>
+        <input type="text" class="form-control" name="IADETARIHI" value="@DateTime.Now.AddDays(7).ToShortDateString()" />
+    </div>
+
+ 
+
+    <br />
+    <button class="btn btn-group" style="background:#690956; color:white"> Ödünç Ver</button>
+    <input type="hidden" value="False" name="ISLEMDURUM" />
+
+</form>

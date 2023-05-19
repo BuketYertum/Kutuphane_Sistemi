@@ -1,0 +1,24 @@
+﻿
+@model MVCKUTUPHANE.Models.Entity.TBL_KATEGORILER
+
+@{
+    ViewBag.Title = "Getir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Guncelle", "Kategori", FormMethod.Post))
+{
+    <div class="form-group" style="margin-top:15px">
+        @Html.LabelFor(x => x.ID, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+        <br/>
+        @Html.LabelFor(x => x.AD, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+    </div>
+
+
+    <div>
+        <button class="btn btn-success">Kategori Güncelle</button>
+    </div>
+}

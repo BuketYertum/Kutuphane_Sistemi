@@ -1,0 +1,21 @@
+﻿
+@model MVCKUTUPHANE.Models.Entity.TBL_PERSONELLER
+
+@{
+    ViewBag.Title = "Getir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Guncelle", "Personel", FormMethod.Post))
+{
+
+    <label style="margin-top:15px">ID</label>
+    @Html.TextBoxFor(personel => personel.ID, new { @class = "form-control" })
+
+    <label style="margin-top:15px">PERSONEL</label>
+    @Html.TextBoxFor(personel => personel.PERSONEL, new { @class = "form-control" })
+
+    <button style="margin-top:15px" class="btn btn-success">Personel Güncelle</button>
+
+}

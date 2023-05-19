@@ -1,0 +1,53 @@
+﻿
+@model MVCKUTUPHANE.Models.Entity.TBL_UYELER
+
+@{
+    ViewBag.Title = "Getir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Guncelle", "Uye", FormMethod.Post))
+{
+    <br />
+    <label class="form-control"> ID </label>
+    @Html.TextBoxFor(y => y.ID, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> AD </label>
+    @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> Soyad </label>
+    @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> MAIL </label>
+    @Html.TextBoxFor(y => y.MAIL, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> KULLANICIADI </label>
+    @Html.TextBoxFor(y => y.KULLANICIADI, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> SIFRE </label>
+    @Html.TextBoxFor(y => y.SIFRE, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> FOTO </label>
+    @Html.TextBoxFor(y => y.FOTO, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> TELEFON </label>
+    @Html.TextBoxFor(y => y.TELEFON, new { @class = "form-control" })
+    <br />
+
+    <label class="form-control"> OKUL </label>
+    @Html.TextBoxFor(y => y.OKUL, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+}
+
+
